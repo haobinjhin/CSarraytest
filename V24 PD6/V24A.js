@@ -1,4 +1,4 @@
-let data = [
+const data = [
   {
     id: "dp3-1",
     name: "Ampharos",
@@ -23012,3 +23012,22 @@ let data = [
 //1 print each card where the series set is "HeartGold & SoulSilver"
 
 //2 print each card name where the card type "includes" Fire
+
+
+
+/* 
+for (let i = 0; i <= data.length-1; i++){
+ if (data[i].set.series == "HeartGold & SoulSilver")(
+  console.log(data[i].name)
+ )
+}     */
+
+
+for(let i = 0; i <= data.length-1; i++){
+  if (data[i].types.forEach(element => {element == "Fire"}))(
+    console.log(data[i].name)
+  )
+} 
+
+
+data.forEach((pokemon) => pokemon.types.forEach((type) => ( if (type == "Fire")(console.log(pokemon.name)) )))
